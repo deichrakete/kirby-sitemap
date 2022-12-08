@@ -22,7 +22,14 @@ composer require foerdeliebe/kirby-sitemap
 
 ## Setup
 
-<!-- Additional instructions on how to configure the plugin (e.g. blueprint setup, config options, etc.) -->
+Usable config options
+
+```
+'foerdeliebe.sitemap.ignore' => [
+  'uri' => ['error', 'hidden/page',],
+  'template' => ['redirect', 'data_store']
+]
+```
 
 ## Options
 
