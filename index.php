@@ -7,7 +7,8 @@ Kirby::plugin('foerdeliebe/sitemap', [
         'ignore' => [
             'uri' => ['error'],
             'template' => [],
-        ]
+        ],
+        'languages' => true,
     ],
     'routes' => [
         [

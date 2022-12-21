@@ -34,13 +34,17 @@ function isWhitelisted(Page $page, array $ignore_uri, array $ignore_template): b
         <?php if (isWhitelisted($page, $ignore_uri, $ignore_template)): ?>
             <url>
                 <loc><?= html($page->url()) ?></loc>
-                <lastmod><?= $page->modified('c', 'date') ?></lastmod>
+                <?php if ($page->modified()): ?>
+                    <lastmod><?= $page->modified('c', 'date') ?></lastmod>
+                <?php endif; ?>
                 <priority><?= $page->isHomePage()
                         ? 1
                         : number_format(0.5 / $page->depth(), 1) ?></priority>
-                <?php foreach ($languages as $language): ?>
-                    <xhtml:link rel="alternate" hreflang="<?= $language->code() ?>" href="<?= html($page->url($language->code())) ?>" />
-                <?php endforeach; ?>
+                <?php if (kirby()->option('foerdeliebe.sitemap.languages')): ?>
+                    <?php foreach ($languages as $language): ?>
+                        <xhtml:link rel="alternate" hreflang="<?= $language->code() ?>" href="<?= html($page->url($language->code())) ?>" />
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </url>
         <?php endif; ?>
     <?php endforeach; ?>
