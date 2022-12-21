@@ -25,9 +25,12 @@ composer require foerdeliebe/kirby-sitemap
 Usable config options
 
 ```
-'foerdeliebe.sitemap.ignore' => [
-  'uri' => ['error', 'hidden/page',],
-  'template' => ['redirect', 'data_store']
+'foerdeliebe.sitemap' => [
+  'ignore' => [
+    'uri' => ['error', 'hidden/page',],
+    'template' => ['redirect', 'data_store'],
+  ],
+  'languages' => false,
 ]
 ```
 
