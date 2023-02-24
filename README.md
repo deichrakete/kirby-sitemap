@@ -11,7 +11,7 @@ Download and copy this repository to `/site/plugins/sitemap`.
 ### Git submodule
 
 ```
-git submodule add https://github.com/foerdeliebe/kirby-sitemap.git site/plugins/sitemap
+git submodule add https://gitlab.com/foerdeliebe/kirby/sitemap.git site/plugins/sitemap
 ```
 
 ### Composer
