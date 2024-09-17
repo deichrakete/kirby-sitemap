@@ -1,8 +1,9 @@
 <?php
 
 use Kirby\Cms\Response as Response;
+use Kirby\Cms\App as Kirby;
 
-Kirby::plugin('foerdeliebe/sitemap', [
+Kirby::plugin('deichrakete/sitemap', [
     'options' => [
         'ignore' => [
             'uri' => ['error'],
@@ -14,8 +15,8 @@ Kirby::plugin('foerdeliebe/sitemap', [
         [
             'pattern' => 'sitemap.xml',
             'action'  => function() {
-                $ignore_template = kirby()->option('foerdeliebe.sitemap.ignore.template');
-                $ignore_uri = kirby()->option('foerdeliebe.sitemap.ignore.uri');
+                $ignore_template = kirby()->option('deichrakete.sitemap.ignore.template');
+                $ignore_uri = kirby()->option('deichrakete.sitemap.ignore.uri');
                 $languages = kirby()->languages() ?: [];
                 $pages = site()->pages()->index();
 

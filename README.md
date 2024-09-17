@@ -11,13 +11,13 @@ Download and copy this repository to `/site/plugins/sitemap`.
 ### Git submodule
 
 ```
-git submodule add https://github.com/foerdeliebe/kirby-sitemap.git site/plugins/sitemap
+git submodule add https://github.com/deichrakete/kirby-sitemap.git site/plugins/sitemap
 ```
 
 ### Composer
 
 ```
-composer require foerdeliebe/kirby-sitemap
+composer require deichrakete/kirby-sitemap
 ```
 
 ## Setup
@@ -25,7 +25,7 @@ composer require foerdeliebe/kirby-sitemap
 Usable config options
 
 ```
-'foerdeliebe.sitemap' => [
+'deichrakete.sitemap' => [
   'ignore' => [
     'uri' => ['error', 'hidden/page',],
     'template' => ['redirect', 'data_store'],
@@ -48,4 +48,4 @@ MIT
 
 ## Credits
 
-- [](https://getkirby.com/plugins/foerdeliebe)
+- [](https://getkirby.com/plugins/deichrakete)

@@ -40,7 +40,7 @@ function isWhitelisted(Page $page, array $ignore_uri, array $ignore_template): b
                 <priority><?= $page->isHomePage()
                         ? 1
                         : number_format(0.5 / $page->depth(), 1) ?></priority>
-                <?php if (kirby()->option('foerdeliebe.sitemap.languages')): ?>
+                <?php if (kirby()->option('deichrakete.sitemap.languages')): ?>
                     <?php foreach ($languages as $language): ?>
                         <xhtml:link rel="alternate" hreflang="<?= $language->code() ?>" href="<?= html($page->url($language->code())) ?>" />
                     <?php endforeach; ?>
